@@ -1,0 +1,17 @@
+{
+  "description": "Use ⌘+⇧+o for toggling fullscreen on any website.",
+  "manifest_version": 2,
+  "name": "Fullscreen",
+  "version": "0.0",
+  "homepage_url": "https://github.com/MarkTiedemann/fullscreen",
+  "icons": {
+    "512": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["extension.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
