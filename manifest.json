@@ -1,5 +1,5 @@
 {
-  "description": "Use Ctrl+⇧+O or ⌘+⇧+O to toggle fullscreen on any website.",
+  "description": "Press the button or use Ctrl+⇧+O / ⌘+⇧+O to toggle fullscreen on any website. Titlebars will be hidden too. Press Esc to leave fullscreen.",
   "manifest_version": 2,
   "name": "Fullscreen",
   "version": "0.3",
