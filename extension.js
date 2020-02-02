@@ -1,6 +1,14 @@
 var shift = false;
 var meta = false;
 
+function toggleFullscreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  } else {
+    document.exitFullscreen();
+  }
+}
+
 document.addEventListener("keydown", function(event) {
   switch (event.key) {
     case "Shift":
@@ -11,11 +19,7 @@ document.addEventListener("keydown", function(event) {
       break;
     case "o":
       if (meta && shift) {
-        if (!document.fullscreenElement) {
-          document.documentElement.requestFullscreen();
-        } else {
-          document.exitFullscreen();
-        }
+        toggleFullscreen();
       }
       break;
   }
@@ -31,3 +35,7 @@ document.addEventListener("keyup", function(event) {
       break;
   }
 });
+
+console.log("Loaded fullscreen!");
+
+toggleFullscreen();
