@@ -6,12 +6,15 @@ This extension provides a minimal interface to the Living Standard [Element.requ
 
 Unlike other extensions available on extension stores, this extension acts like a typical video-fullscreen operation: it removes titlebars and other browser UI until Esc is pressed. Great for reading online without distractions.
 
-Thanks to [Mark Tiedemann](https://github.com/MarkTiedemann/fullscreen) who developed the initial idea: a no-nonsense fullscreen extension.
+## Installation
 
-This fork refactored the original significanty:
+- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/fullscreen-any-site)
+- [Chrome](https://chrome.google.com/webstore/detail/fullscreen/fkbigbddainndbfabdcmbhgionobgina)
 
-1. Refactor from `<all_urls>` permission to the less intrusive `activeTab` permission
-2. Refactor custom key listeners to out-of-the-box WebExtension Command API shortcuts
+## Contributors
+
+- [Mark Tiedemann](https://github.com/MarkTiedemann)
+- [Thor Galle](https://github.com/th0rgall)
 
 ## License
 
