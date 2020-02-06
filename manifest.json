@@ -17,8 +17,8 @@
   "commands": {
     "toggle-fullscreen": {
       "suggested_key": {
-        "default": "Ctrl+Shift+O",
-        "mac": "Command+Shift+O"
+        "default": "Ctrl+Shift+I",
+        "mac": "Command+Shift+I"
       },
       "description": "Toggle fullscreen on this page"
     }
