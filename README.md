@@ -6,18 +6,20 @@ This extension provides a minimal interface to the Living Standard [Element.requ
 
 Unlike other extensions available on extension stores, this extension acts like a typical video-fullscreen operation: it removes titlebars and other browser UI until Esc is pressed. Great for reading online without distractions.
 
-## Installation
+## Download & Install
 
 - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/fullscreen-any-site)
 - [Chrome](https://chrome.google.com/webstore/detail/fullscreen/fkbigbddainndbfabdcmbhgionobgina)
 
 ## Development
 
-This root extension directory can be loaded into browsers, but the manifest may be incomplete.
+This root extension directory can be directly loaded into browsers for testing, but manifest.json may be incomplete or give warnings.
 
-To generate a copy with adjusted specific manifests for Firefox/Chrome, run `make`.
+To build and run browser-specific code for your browser, do the following:
 
-There will be folders and .zip files generated in `/dist`. These can also be used for publishing.
+1. Run `make` in this directory
+2. There will be 2 folders and .zip files generated in `/dist`, respectively for Chrome and Firefox.
+3. Load the extension from `dist/fullscreen-<browser>-<version>-src`.
 
 ## Contributors
 

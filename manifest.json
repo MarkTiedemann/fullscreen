@@ -2,7 +2,7 @@
   "description": "Minimalist fullscreen extension.",
   "manifest_version": 2,
   "name": "Fullscreen",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "permissions": ["activeTab"],
   "homepage_url": "https://github.com/th0rgall/fullscreen",
   "background": {
