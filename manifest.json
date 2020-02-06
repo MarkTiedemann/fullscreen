@@ -6,8 +6,7 @@
   "permissions": ["activeTab"],
   "homepage_url": "https://github.com/th0rgall/fullscreen",
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "scripts": ["background.js"]
   },
   "icons": {
     "512": "icon.png"
