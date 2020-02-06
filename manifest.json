@@ -1,8 +1,8 @@
 {
-  "description": "Press the button or Ctrl/⌘+⇧+O to toggle fullscreen on any website. Titlebars will be hidden too. Press Esc to leave fullscreen.",
+  "description": "Minimalist fullscreen extension.",
   "manifest_version": 2,
   "name": "Fullscreen",
-  "version": "0.3",
+  "version": "0.3.1",
   "permissions": ["activeTab"],
   "homepage_url": "https://github.com/th0rgall/fullscreen",
   "background": {
