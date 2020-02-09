@@ -1,15 +1,21 @@
 .PHONY: all
 
-all:
-	web-ext run
+all: build
 
-publish:
-	@echo "(Press any key to continue.)"
-	@echo "- Bump the version number in the \`manifest.json\` file."
-	@read -n1 -s
-	@echo "- Set the \`WEB_EXT_API_KEY\` and \`WEB_EXT_API_SECRET\` environment variables."
-	@read -n1 -s
-	@echo "- Run \`web-ext sign --api-key \$$WEB_EXT_API_KEY --api-secret \$$WEB_EXT_API_SECRET\`."
-	@read -n1 -s
-	@echo "- Publish the addon at \`https://addons.mozilla.org/\`."
-	@read -n1 -s
+PACKAGE_VERSION := $(shell grep -m1 '"version"' manifest.json | awk -F: '{ print $$2 }' | sed 's/[", ]//g')
+FILES := background.js toggleFullscreen.js icon.png manifest.json
+
+define zip
+	mv manifest-$(1).json manifest.json
+	mkdir -p dist/fullscreen-$(1)-$(PACKAGE_VERSION)-src
+	cp $(FILES) dist/fullscreen-$(1)-$(PACKAGE_VERSION)-src
+	zip -r dist/fullscreen-$(1)-$(PACKAGE_VERSION).zip $(FILES)
+endef
+
+build:
+	node transformManifest.js
+	mkdir -p dist
+	cp manifest.json manifest-source.json
+	$(call zip,chrome)
+	$(call zip,firefox)
+	mv manifest-source.json manifest.json

@@ -1,17 +1,26 @@
 {
-  "description": "Use ⌘+⇧+o for toggling fullscreen on any website.",
+  "description": "Minimalist fullscreen extension.",
   "manifest_version": 2,
   "name": "Fullscreen",
-  "version": "0.2",
-  "homepage_url": "https://github.com/MarkTiedemann/fullscreen",
+  "version": "0.3.2",
+  "permissions": ["activeTab"],
+  "homepage_url": "https://github.com/th0rgall/fullscreen",
+  "background": {
+    "scripts": ["background.js"]
+  },
   "icons": {
     "512": "icon.png"
   },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["extension.js"],
-      "run_at": "document_start"
+  "browser_action": {
+    "default_title": "Fullscreen this page"
+  },
+  "commands": {
+    "toggle-fullscreen": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+I",
+        "mac": "Command+Shift+I"
+      },
+      "description": "Toggle fullscreen on this page"
     }
-  ]
+  }
 }
