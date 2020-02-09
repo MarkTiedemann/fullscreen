@@ -21,7 +21,7 @@ To build and run browser-specific code for your browser, do the following:
 2. There will be 2 folders and .zip files generated in `/dist`, respectively for Chrome and Firefox.
 3. Load the extension from `dist/fullscreen-<browser>-<version>-src`.
 
-## Contributors
+## Authors
 
 - [Mark Tiedemann](https://github.com/MarkTiedemann)
 - [Thor Galle](https://github.com/th0rgall)
